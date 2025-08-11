@@ -30,6 +30,7 @@ public class CourseServiceImpl implements CourseService
         return courseList;
     }
 
+    //getbyid implemented
     @Override
     public Course getCourseById(int id) {
         Course courseById = repository.findById(id).orElseThrow(()-> new NullPointerException("Data not found"+id));
