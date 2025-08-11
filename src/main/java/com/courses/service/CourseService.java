@@ -11,6 +11,7 @@ public interface CourseService
     //save method added
     String saveCourse(Course course);
 
+    //getdata method
     List<Course> getAllCourse();
 
     Course getCourseById(int id);
