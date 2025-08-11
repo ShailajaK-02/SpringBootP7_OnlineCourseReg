@@ -23,6 +23,7 @@ public class CourseServiceImpl implements CourseService
         return "Course saved";
     }
 
+    //getall implemented
     @Override
     public List<Course> getAllCourse() {
         List<Course> courseList = repository.findAll();
