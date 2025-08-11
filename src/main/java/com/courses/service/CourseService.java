@@ -23,5 +23,6 @@ public interface CourseService
     //update method added
     Course updateCourse(int id, Course newCourse);
 
+    //save list
     String saveList(List<Course> courseList);
 }
