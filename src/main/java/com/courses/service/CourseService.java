@@ -17,6 +17,7 @@ public interface CourseService
     //getById method added
     Course getCourseById(int id);
 
+    //delete method added
     String deleteCourse(int id);
 
     Course updateCourse(int id, Course newCourse);
