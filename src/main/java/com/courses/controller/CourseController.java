@@ -25,7 +25,7 @@ public class CourseController
         return new ResponseEntity<>("Course Added", HttpStatus.CREATED);
     }
 
-    //get all data api
+    //get all data api added
     @GetMapping("/getAllData")
     public ResponseEntity<List<Course>> getAllData(){
         List<Course> courseList = courseService.getAllCourse();
