@@ -18,7 +18,7 @@ public class CourseController
     @Autowired
     private CourseService courseService;
 
-    //add data
+    //add data api
     @PostMapping("/addCourse")
     public ResponseEntity<String> addCourse(@RequestBody Course course){
         courseService.saveCourse(course);
