@@ -20,6 +20,7 @@ public interface CourseService
     //delete method added
     String deleteCourse(int id);
 
+    //update method added
     Course updateCourse(int id, Course newCourse);
 
     String saveList(List<Course> courseList);
