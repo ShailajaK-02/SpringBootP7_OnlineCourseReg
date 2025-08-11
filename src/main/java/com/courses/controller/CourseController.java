@@ -32,7 +32,7 @@ public class CourseController
         return new ResponseEntity<>(courseList, HttpStatus.OK);
     }
 
-    //get data by id
+    //get data by id api
     @GetMapping("/getDataById/{id}")
     public ResponseEntity<Course> getById(@PathVariable("id") int id) {
         Course courseById = courseService.getCourseById(id);
