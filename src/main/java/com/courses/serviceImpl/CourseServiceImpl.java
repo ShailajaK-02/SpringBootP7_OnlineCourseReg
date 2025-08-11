@@ -44,6 +44,7 @@ public class CourseServiceImpl implements CourseService
         return "Course deleted";
     }
 
+    //update implemented
     @Override
     public Course updateCourse(int id, Course newCourse) {
         Course course = repository.findById(id).orElseThrow(()-> new NullPointerException("Data not found"));
