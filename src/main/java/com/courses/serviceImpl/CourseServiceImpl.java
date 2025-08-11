@@ -33,4 +33,24 @@ public class CourseServiceImpl implements CourseService
         Course courseById = repository.findById(id).orElseThrow(()-> new NullPointerException("Data not found"+id));
         return courseById;
     }
+
+    @Override
+    public String deleteCourse(int id) {
+        repository.deleteById(id);
+        return "Course deleted";
+    }
+
+    @Override
+    public Course updateCourse(int id, Course newCourse) {
+        Course course = repository.findById(id).orElseThrow(()-> new NullPointerException("Data not found"));
+        course.setFeesPaid(newCourse.getFeesPaid());
+        Course updateCourse = repository.save(course);
+        return updateCourse;
+    }
+
+    @Override
+    public String saveList(List<Course> courseList) {
+        repository.saveAll(courseList);
+        return "List saved";
+    }
 }

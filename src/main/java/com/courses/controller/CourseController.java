@@ -38,4 +38,25 @@ public class CourseController
         Course courseById = courseService.getCourseById(id);
         return new ResponseEntity<>(courseById, HttpStatus.OK);
     }
+
+    //delete
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> delete(@PathVariable("id") int id){
+        courseService.deleteCourse(id);
+        return new ResponseEntity<>("Course deleted",HttpStatus.OK);
+    }
+
+    //update
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Course> update(@PathVariable("id")int id, @RequestBody Course course){
+       Course updatedCourse = courseService.updateCourse(id,course);
+       return new ResponseEntity<>(updatedCourse,HttpStatus.OK);
+    }
+
+    //list
+    @PostMapping("/addList")
+    public ResponseEntity<String> addList(@RequestBody List<Course> courseList){
+        courseService.saveList(courseList);
+        return new ResponseEntity<>("list saved",HttpStatus.OK);
+    }
 }

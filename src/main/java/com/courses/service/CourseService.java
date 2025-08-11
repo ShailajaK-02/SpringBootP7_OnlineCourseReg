@@ -1,14 +1,23 @@
 package com.courses.service;
 
 import com.courses.entity.Course;
+import org.aspectj.weaver.ast.Literal;
 
 import java.util.List;
+import java.util.Timer;
 
 public interface CourseService
 {
+    //save method added
     String saveCourse(Course course);
 
     List<Course> getAllCourse();
 
     Course getCourseById(int id);
+
+    String deleteCourse(int id);
+
+    Course updateCourse(int id, Course newCourse);
+
+    String saveList(List<Course> courseList);
 }
