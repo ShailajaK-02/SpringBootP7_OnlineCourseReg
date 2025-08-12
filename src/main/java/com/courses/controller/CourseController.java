@@ -39,7 +39,7 @@ public class CourseController
         return new ResponseEntity<>(courseById, HttpStatus.OK);
     }
 
-    //delete
+    //delete api
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> delete(@PathVariable("id") int id){
         courseService.deleteCourse(id);
