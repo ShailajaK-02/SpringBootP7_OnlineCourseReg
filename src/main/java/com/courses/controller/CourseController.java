@@ -53,7 +53,7 @@ public class CourseController
        return new ResponseEntity<>(updatedCourse,HttpStatus.OK);
     }
 
-    //list
+    //list api
     @PostMapping("/addList")
     public ResponseEntity<String> addList(@RequestBody List<Course> courseList){
         courseService.saveList(courseList);
