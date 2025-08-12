@@ -46,7 +46,7 @@ public class CourseController
         return new ResponseEntity<>("Course deleted",HttpStatus.OK);
     }
 
-    //update api
+    //update api implmented
     @PutMapping("/update/{id}")
     public ResponseEntity<Course> update(@PathVariable("id")int id, @RequestBody Course course){
        Course updatedCourse = courseService.updateCourse(id,course);
