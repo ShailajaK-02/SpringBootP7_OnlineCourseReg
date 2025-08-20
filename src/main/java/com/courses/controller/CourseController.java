@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//controller added
+
 @RestController
 @RequestMapping("/courses")
 public class CourseController
