@@ -6,7 +6,7 @@ import org.aspectj.weaver.ast.Literal;
 import java.util.List;
 import java.util.Timer;
 
-//service added
+//service  interface added
 public interface CourseService
 {
     //save method added
