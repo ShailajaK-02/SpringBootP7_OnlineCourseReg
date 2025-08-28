@@ -2,7 +2,7 @@ package com.courses;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
- //main class
+ //main class added
 @SpringBootApplication
 public class OnlineCourseRegistrationApplication {
 
